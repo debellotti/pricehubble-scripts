@@ -7,8 +7,8 @@ from commands.main import create_table, ingest_data
 
 with DAG(
     dag_id="dag_create_table",
-    start_date=datetime(2023, 5, 19),
-    schedule=None,
+    start_date=datetime(2025, 5, 19),
+    schedule="15 * * * *",  # every hour at **:15
     catchup=False,
 ) as dag:
 

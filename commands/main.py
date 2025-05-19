@@ -8,14 +8,11 @@ con = open_duckdb_connection("db/pricehubble.duckdb")
 
 @click.command()
 @click.option(
-    "--db",
-    prompt="The database you want to connect to",
     help="The database that you want to use to ingest data.",
 )
-def create_table(db):
+def create_table():
     """Simple program that creates or connect to your database."""
     create_db_table(con)
-    click.echo(f"Connected to {db}!")
 
 
 @click.command()

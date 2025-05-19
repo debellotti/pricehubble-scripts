@@ -6,7 +6,6 @@ from queries.sql import CREATE_TABLE, INGEST_DATA
 def open_duckdb_connection(db):
     """Open or create (if not exists) a db"""
     return duckdb.connect(db)
-    # db/pricehubble.duckdb"
 
 
 def create_table(con):
