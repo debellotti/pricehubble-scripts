@@ -12,7 +12,7 @@ INGEST_DATA = """INSERT INTO properties
             municipality, living_area,
             CAST(replace(replace(raw_price, ' ', ''),
             '€/mo.', '') AS FLOAT) AS price,
-            ROUND(price/living_area, 2) AS price_per_square_meter 
+            ROUND(price/living_area, 2) AS price_per_square_meter
             FROM read_json('unprocessed_json_data/scraping_data.jsonl')
             WHERE price_per_square_meter BETWEEN 500 AND 15000
             AND trim(property_type) = 'apartment'
