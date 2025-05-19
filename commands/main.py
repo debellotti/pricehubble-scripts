@@ -17,8 +17,7 @@ def create_table():
 
 @click.command()
 @click.option(
-    "--path", prompt="Raw data path",
-    help="The path that leads to the data to ingest."
+    "--path", prompt="Raw data path", help="The path that leads to the data to ingest."
 )
 def ingest_data(path):
     """Simple program that ingest the requested data."""

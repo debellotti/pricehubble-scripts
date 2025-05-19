@@ -1,8 +1,8 @@
 from datetime import datetime
 
-from airflow import DAG
 from airflow.providers.standard.operators.python import PythonOperator
 
+from airflow import DAG
 from commands.main import create_table, ingest_data
 
 with DAG(
@@ -12,8 +12,8 @@ with DAG(
     catchup=False,
 ) as dag:
 
-    first_task = PythonOperator(task_id="create_table",
-                                python_callable=create_table)
+    first_task = PythonOperator(task_id="create_table", python_callable=create_table)
 
-    second_task = PythonOperator(task_id="ingest_data",
-                                 python_callable=ingest_data)
+    second_task = PythonOperator(task_id="ingest_data", python_callable=ingest_data)
+
+first_task >> second_task

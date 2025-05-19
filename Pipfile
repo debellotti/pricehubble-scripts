@@ -12,6 +12,8 @@ mypy = "*"
 isort = "*"
 duckdb = "*"
 apache-airflow = "*"
+numpy = "*"
+pandas = "*"
 
 [dev-packages]
 

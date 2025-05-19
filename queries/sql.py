@@ -18,3 +18,5 @@ INGEST_DATA = """INSERT INTO properties
             AND trim(property_type) = 'apartment'
             OR trim(property_type) = 'house'
             AND scraping_date > '2020-03-05'"""
+
+SHOW_PROPERTIES_TABLE = """SELECT * FROM properties"""
