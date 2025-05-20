@@ -2,10 +2,10 @@ import os
 import sys
 import duckdb
 import pandas as pd
-from queries.sql import CREATE_TABLE, INGEST_DATA, SHOW_PROPERTIES_TABLE
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
+from queries.sql import CREATE_TABLE, INGEST_DATA, SHOW_PROPERTIES_TABLE
 
 def open_duckdb_connection(db):
     """Open or create (if not exists) a db"""
